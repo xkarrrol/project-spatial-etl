@@ -22,7 +22,7 @@ Projekt został zrealizowany w ramach budowy portfolio technicznego. Głównym z
 4.  **Analyze:** Wykonywanie operacji (np. `ST_Buffer`, `ST_Intersects`, `ST_Area`).
 
 **Przykładowy Spatial Join:**
-\```sql
+```sql
 WITH strefa_pilsudskiego AS (
     SELECT ST_Buffer(ST_Union(geometry), 200) AS bufor_200m
     FROM drogi_osm 
@@ -35,7 +35,7 @@ SELECT
 FROM budynki_osm b
 JOIN strefa_pilsudskiego sp
     ON ST_Intersects(b.geometry, sp.bufor_200m);
-\```
+```
 
 **Dane wejściowe:**
 * **Zbiór:** Sieć drogowa oraz zabudowa miejska – obszar: Pabianice, Polska.

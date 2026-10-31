@@ -17,8 +17,8 @@ Projekt został zrealizowany w ramach budowy portfolio. Głównym założeniem b
 
 ---
 
-**Uruchomienie środowiska (Docker)**
-Projekt wykorzystuje konteneryzację do pełnej izolacji backendu. Aby uniknąć ręcznej instalacji PostgreSQL oraz rozszerzenia PostGIS na systemie hosta, środowisko zostało zdefiniowane w pliku `docker-compose.yml`.
+**Uruchomienie środowiska (Docker):**
+*    Projekt wykorzystuje konteneryzację do pełnej izolacji backendu. Aby uniknąć ręcznej instalacji PostgreSQL oraz rozszerzenia PostGIS na systemie hosta, środowisko zostało zdefiniowane w pliku `docker-compose.yml`.
 
 Uruchomienie instancji bazy danych sprowadza się do jednej komendy w głównym katalogu projektu:
 ```bash

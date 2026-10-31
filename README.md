@@ -17,6 +17,16 @@ Projekt został zrealizowany w ramach budowy portfolio. Głównym założeniem b
 
 ---
 
+**Uruchomienie środowiska (Docker)**
+Projekt wykorzystuje konteneryzację do pełnej izolacji backendu. Aby uniknąć ręcznej instalacji PostgreSQL oraz rozszerzenia PostGIS na systemie hosta, środowisko zostało zdefiniowane w pliku `docker-compose.yml`.
+
+Uruchomienie instancji bazy danych sprowadza się do jednej komendy w głównym katalogu projektu:
+```bash
+docker compose up -d
+```
+
+---
+
 **Architektura rozwiązania:**
 1.  **Extract:** Skrypty w Pythonie pobierają surowe dane wektorowe z OpenStreetMap (sieć drogowa i zabudowa).
 2.  **Transform:** GeoPandas filtruje atrybuty, standaryzuje typy danych (ominięcie zagnieżdżonych list z OSM) i transformuje układy współrzędnych do lokalnego systemu metrycznego (EPSG:2180).

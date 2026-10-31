@@ -1,0 +1,4 @@
+geopandas
+osmnx
+sqlalchemy
+psycopg2-binary

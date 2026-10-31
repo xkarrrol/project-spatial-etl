@@ -1,7 +1,7 @@
 # Spatial ETL & Location Intelligence Pipeline
 
 **Cel projektu**
-Projekt został zrealizowany w ramach budowy portfolio technicznego. Głównym założeniem było pokazanie praktycznego wykorzystania pełnego obiegu danych przestrzennych - od automatycznego pobierania surowej geometrii przez API (OpenStreetMap), przez jej transformację w Pythonie, aż po zaawansowaną analitykę przestrzenną wykonaną bezpośrednio na silniku bazy danych PostGIS.
+Projekt został zrealizowany w ramach budowy portfolio. Głównym założeniem było pokazanie praktycznego wykorzystania pełnego obiegu danych przestrzennych w Pabianicach - od automatycznego pobierania surowej geometrii przez API (OpenStreetMap), przez jej transformację w Pythonie, aż po zaawansowaną analitykę przestrzenną wykonaną bezpośrednio na silniku bazy danych PostGIS.
 
 ---
 
@@ -15,11 +15,15 @@ Projekt został zrealizowany w ramach budowy portfolio technicznego. Głównym z
 *   **Analityka przestrzenna:** PostGIS Spatial SQL
 *   **Wizualizacja:** QGIS (bezpośrednie wczytywanie wyników zapytań SQL)
 
+---
+
 **Architektura rozwiązania:**
 1.  **Extract:** Skrypty w Pythonie pobierają surowe dane wektorowe z OpenStreetMap (sieć drogowa i zabudowa).
 2.  **Transform:** GeoPandas filtruje atrybuty, standaryzuje typy danych (ominięcie zagnieżdżonych list z OSM) i transformuje układy współrzędnych do lokalnego systemu metrycznego (EPSG:2180).
 3.  **Load:** Wypchnięcie oczyszczonych ramek danych do izolowanego kontenera PostgreSQL/PostGIS.
 4.  **Analyze:** Wykonywanie operacji (np. `ST_Buffer`, `ST_Intersects`, `ST_Area`).
+
+---
 
 **Przykładowy Spatial Join:**
 ```sql
@@ -37,8 +41,9 @@ JOIN strefa_pilsudskiego sp
     ON ST_Intersects(b.geometry, sp.bufor_200m);
 ```
 
+---
+
 **Dane wejściowe:**
 * **Zbiór:** Sieć drogowa oraz zabudowa miejska – obszar: Pabianice, Polska.
 * **Źródło bazowe:** OpenStreetMap (OSM).
-* **Metoda ekstrakcji:** Dynamiczne zapytania do Overpass API realizowane przez bibliotekę `osmnx` (skrypty Python).
-* **Licencja danych:** Open Data Commons Open Database License (ODbL).
+* **Metoda ekstrakcji:** Dynamiczne zapytania do Overpass API realizowane przez bibliotekę `osmnx`.

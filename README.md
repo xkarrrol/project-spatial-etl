@@ -5,7 +5,7 @@ Projekt został zrealizowany w ramach budowy portfolio. Głównym założeniem b
 
 ---
 
-<img width="3507" height="2480" alt="spatial_etl_result" src="https://github.com/user-attachments/assets/db6987e3-5c74-44d3-97bc-1a99cff22c6a" />
+<img width="3507" height="2480" alt="spatial_etl_result" src="https://github.com/user-attachments/assets/ddfcb0e1-11e0-43d0-994a-6483ffbffd6b" />
 
 ---
 
